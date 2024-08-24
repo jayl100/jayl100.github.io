@@ -1,0 +1,121 @@
+
+
+/* ---------- 메인페이지 ---------- */
+/* ---------- 메인페이지 ---------- */
+
+
+.main_box {
+    position: relative;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden; /* 박스 밖으로 넘치는 내용을 숨기기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main_box img {
+    position: absolute; /* 이미지가 박스에 맞게 위치하도록 설정 */
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 박스의 크기에 맞게 조정 */
+    object-position: center; /* 이미지의 중앙을 표시 */
+    /*transform: translate(-50%, -50%); !* 이미지가 박스 중앙에 위치하도록 조정 *!*/
+    border-radius: 20px; /* 이미지에 모서리 둥글기 적용 */
+    display: block;
+}
+
+.main_title {
+    position: absolute; /* 텍스트를 절대 위치로 설정 */
+    top: 50%; /* 텍스트를 수직 중앙에 배치 */
+    left: 50%; /* 텍스트를 수평 중앙에 배치 */
+    transform: translate(-50%, -50%); /* 중앙 위치 조정을 위한 변환 */
+    font-size: 2em; /* 폰트 크기 */
+    font-weight: bold;
+    color: #000; /* 텍스트 색상을 흰색으로 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    z-index: 2; /* 텍스트를 이미지 위에 배치 */
+}
+
+.sub_title {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    margin: 80px auto 40px;
+}
+
+.card_section {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-between; /* 수평 중앙 정렬 */
+}
+
+.card_section .card {
+    flex: 1; /* 각 카드가 동일한 너비를 가지도록 설정 */
+    max-width: 100%; /* 각 카드의 최대 너비를 설정 */
+    display: flex;
+    flex-direction: column; /* 수직으로 콘텐츠 배치 */
+    align-items: center; /* 콘텐츠를 중앙에 정렬 */
+}
+
+.card_section .card .card_img {
+    width: 100%;
+    height: 200px;
+    position: relative; /* 오버레이를 위해 position: relative 설정 */
+    overflow: hidden; /* 이미지가 카드 영역을 넘지 않도록 숨기기 */
+    border-radius: 20px;
+}
+
+.card_section .card .card_img img {
+    width: 100%; /* 카드의 너비에 맞춤 */
+    height: 100%; /* 이미지의 높이를 카드 높이에 맞춤 */
+    object-fit: cover; /* 이미지가 고정된 크기에 맞게 잘리도록 설정 */
+    object-position: top; /* 이미지의 상단 부분이 노출되도록 설정 */
+}
+
+.card_section .card .card_img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.03); /* 검정색 반투명 오버레이 */
+    pointer-events: none; /* 오버레이가 클릭을 막지 않도록 설정 */
+}
+
+.card_section .card .card_des {
+    text-align: center;
+    padding: 12px 0; /* 이미지와 텍스트 사이의 간격 설정 */
+}
+
+.card_section .card .card_des p {
+    margin: 12px 0; /* 각 텍스트 요소 사이의 간격 설정 */
+    font-size: 16px;
+    color: #000; /* 텍스트 색상 설정 */
+}
+
+.card_section .card .card_des p:first-child {
+    font-weight: bold; /* 첫 번째 텍스트를 굵게 표시 */
+}
+
+.project_more_btn {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    border: #d9d9d9 solid 1px;
+    height: 50px;
+    width: 100px;
+    border-radius: 900px;
+    display: flex; /* 중앙 정렬을 위해 flexbox 사용 */
+    justify-content: center; /* 버튼 내부의 텍스트를 수평 중앙에 배치 */
+    align-items: center; /* 버튼 내부의 텍스트를 수직 중앙에 배치 */
+    margin: 40px auto 40px; /* 상단 여백을 주고 중앙으로 정렬 */
+    position: relative;
+}
