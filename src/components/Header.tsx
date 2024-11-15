@@ -1,39 +1,38 @@
 import styled from 'styled-components'
-import Container from "./Container.tsx";
-
+import {ContainerStyled} from "./Container.tsx";
+import Logo from '../assets/HYEON_logo_colour.svg'
+import {Link} from "react-router-dom";
 
 function Header() {
   return (
     <HeaderStyled>
-      <Container>
+      <ContainerStyled>
         <DivStyled>
           <LogoStyled>
-            <h1>hyeon</h1>
+            <h1>
+              <Link to='/'>
+                <img src={Logo} alt="logo"/>
+              </Link>
+            </h1>
           </LogoStyled>
           <UlStyled>
-            <li>
-              아이템
-            </li>
-            <li>
-              "나"
-            </li>
-            <li>
-              연락
-            </li>
+            <Link to='/project'><p>프로젝트</p></Link>
+            <Link to='/about'><p>"나"</p></Link>
+            <Link to='/contact'><p>연락</p></Link>
           </UlStyled>
         </DivStyled>
-      </Container>
+      </ContainerStyled>
     </HeaderStyled>
   );
 }
 const DivStyled = styled.div`
-    width: 1280px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 `
 
 const LogoStyled = styled.div`
+
 `
 
 const UlStyled = styled.ul`
@@ -41,10 +40,11 @@ const UlStyled = styled.ul`
     justify-content: space-between;
     align-items: center;
     gap: 48px;
-    
-    font-size: 18px;
+
+    font-size: 1rem;
     font-weight: bold;
     list-style: none;
+
 `
 
 const HeaderStyled = styled.header`

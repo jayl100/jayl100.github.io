@@ -1,4 +1,5 @@
 {
+  "homepage": "https://jayl100.github.io/jayl100.github.io",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +10,7 @@
     "lint": "eslint jayl100.github.io",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
